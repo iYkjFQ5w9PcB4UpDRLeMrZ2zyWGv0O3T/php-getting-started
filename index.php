@@ -1,5 +1,8 @@
 <?php
 header('Content-type: text/json;charset=utf-8');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
 $urls = $_GET['url'];
 $array = parse_url($urls);
 if (empty($array)) {
